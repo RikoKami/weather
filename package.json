@@ -16,7 +16,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*": "npm run lint --fix"
+    "src/**/*": ["npm run lint --fix"]
   },
   "dependencies": {
     "next": "10.1.2",
