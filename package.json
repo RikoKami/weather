@@ -6,17 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src --max-warnings=0",
+    "lint:check": "eslint src --max-warnings=0",
+    "lint:fix": "eslint src --max-warnings=0 --fix",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write ."
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*": ["lint --fix"]
   },
   "dependencies": {
     "next": "10.1.2",
@@ -33,7 +26,6 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "typescript": "^4.2.3"
