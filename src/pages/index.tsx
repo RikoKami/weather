@@ -1,18 +1,14 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import s from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={s.container}>
       <Head>
         <title>Weather</title>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-      </main>
+      <main className={s.main}></main>
     </div>
   )
 }

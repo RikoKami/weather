@@ -1,0 +1,10 @@
+@import "../styles/variables";
+
+.container {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+  }
+}
+
