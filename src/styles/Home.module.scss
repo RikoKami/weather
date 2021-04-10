@@ -1,10 +1,75 @@
-@import "../styles/variables";
+@import '../styles/variables';
 
 .container {
   .main {
     display: grid;
     grid-template-columns: 1fr 3fr;
 
+    .today {
+      background-color: nth($blue, 3);
+      height: 100vh;
+    }
+
+    .week {
+      background: nth($blue, 5);
+
+      .degrees {
+        display: flex;
+        justify-content: flex-end;
+        margin: 42px 130px;
+
+        button {
+          background: nth($blue, 2);
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          border: 0;
+          font-family: 'Raleway', sans-serif;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 21px;
+
+          + button {
+            margin-left: 12px;
+          }
+
+          &.active {
+            background: nth($gray, 1);
+          }
+        }
+      }
+
+      .currentWeek {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 26px;
+        margin: 42px 130px;
+      }
+    }
   }
 }
 
+.cardWeek {
+  img {
+    max-width: 56px;
+    margin-top: 12px;
+  }
+  .temp {
+    display: flex;
+    span {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: nth($gray, 2);
+      margin-top: 32px;
+
+      &.max {
+        color: nth($gray, 1);
+      }
+      + span {
+        margin-left: 16px;
+      }
+    }
+  }
+}
