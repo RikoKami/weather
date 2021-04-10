@@ -9,7 +9,8 @@
     "lint:check": "eslint src --max-warnings=0",
     "lint:fix": "eslint src --max-warnings=0 --fix",
     "prettier:check": "prettier --check .",
-    "prettier:fix": "prettier --write ."
+    "prettier:fix": "prettier --write .",
+    "commit": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
     "next": "10.1.2",
