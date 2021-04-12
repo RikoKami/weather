@@ -2,7 +2,9 @@ This is a [Next.js](https://nextjs.org/) project.
 
 ## About
 
-> Challenge: Create a weather app using an API. Fulfill user stories below
+> Challenge: Create a weather app using an API. 
+
+Fulfill user stories below
 
 - [ ] User story: I can see city weather as default, preferably my current location
 
