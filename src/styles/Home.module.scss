@@ -12,11 +12,12 @@
 
     .week {
       background: nth($blue, 5);
+      padding: 42px 130px;
 
       .degrees {
         display: flex;
         justify-content: flex-end;
-        margin: 42px 130px;
+        margin: 42px 0px;
 
         button {
           background: nth($blue, 2);
@@ -41,9 +42,25 @@
 
       .currentWeek {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        column-gap: 26px;
-        margin: 42px 130px;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 26px;
+      }
+
+      .title {
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        color: nth($gray, 1);
+        margin-top: 72px;
+        margin-bottom: 32px;
+      }
+
+      .columnFour {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px;
+
       }
     }
   }
@@ -70,6 +87,84 @@
       + span {
         margin-left: 16px;
       }
+    }
+  }
+}
+
+.groupInfo {
+  font-family: "Raleway",sans-serif;
+  font-size: 40px;
+  line-height: 75px;
+  color: nth($gray, 1);
+  .number{
+    font-family: inherit;
+    font-size: 64px;
+    font-weight: bold;
+  }
+}
+
+
+.windStatus {
+  .direction {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    margin-top: 16px;
+    .icon{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(nth($white, 1), 0.3);
+      padding: 12px;
+    }
+    span {
+      display: inline-block;
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color:nth($gray, 1);
+    }
+  }
+}
+
+
+.humidity {
+  .progress {
+    position: relative;
+    height: 48px;
+    min-width: 185px;
+    span, p {
+      position: absolute;
+      top: 0;
+      content: "";
+      color: nth($gray, 2);
+      font-family: "Raleway", sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 14px;
+      &:nth-child(1) {
+        left: 0;
+      }
+      &:nth-child(2) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:nth-child(3){
+        right: 0;
+      }
+    }
+
+    .progressBar {
+      margin-top: 16px;
+      width: 100%;
+    }
+    p {
+      margin: 0;
+      top: unset;
+      right: 0;
+      bottom: 0;
+      color: nth($gray, 2);
     }
   }
 }

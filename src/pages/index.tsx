@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import { Card } from '../components/Card'
+import { NavigationIcon } from '../components/NavigationIcon'
 import s from '../styles/Home.module.scss'
 
 interface degrees {
@@ -84,7 +85,6 @@ export default function Home() {
               ºF
             </button>
           </div>
-
           <div className={s.currentWeek}>
             {week.map(w => (
               <Card title={w.title} className={s.cardWeek} key={w.id}>
@@ -99,6 +99,46 @@ export default function Home() {
                 </>
               </Card>
             ))}
+          </div>
+          <h2 className={s.title}>{`Today's Highlights`}</h2>
+          <div className={s.columnFour}>
+            <Card title="Wind Status" className={s.windStatus}>
+              <div className={s.groupInfo}>
+                <span className={s.number}>7</span> mph
+              </div>
+              <div className={s.direction}>
+                <div className={s.icon}>
+                  <NavigationIcon style={{ transform: 'rotate(-90deg)' }} />
+                </div>
+                <span>ENE</span>
+              </div>
+            </Card>
+            <Card title="Humidity" className={s.humidity}>
+              <div className={s.groupInfo}>
+                <span className={s.number}>85</span>%
+              </div>
+              <div className={s.progress}>
+                <span>0</span>
+                <span>50</span>
+                <span>100</span>
+                <progress
+                  value="85"
+                  max="100"
+                  className={s.progressBar}
+                ></progress>
+                <p>%</p>
+              </div>
+            </Card>
+            <Card title="Visibility">
+              <div className={s.groupInfo}>
+                <span className={s.number}>6,4</span> miles
+              </div>
+            </Card>
+            <Card title="Air Pressure">
+              <div className={s.groupInfo}>
+                <span className={s.number}>998</span> mb
+              </div>
+            </Card>
           </div>
         </section>
       </main>
