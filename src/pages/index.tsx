@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import { Card } from '../components/Card'
+import { CloudIcon } from '../components/CloudIcon'
 import { NavigationIcon } from '../components/NavigationIcon'
 import { ProgressBar } from '../components/ProgressBar'
 import s from '../styles/Home.module.scss'
@@ -69,7 +70,14 @@ export default function Home() {
       </Head>
 
       <main className={s.main}>
-        <aside className={s.today}></aside>
+        <aside className={s.today}>
+          <div className={s.climate}>
+            <CloudIcon className={s.svg} />
+            <CloudIcon className={s.svg} />
+            <CloudIcon className={s.svg} />
+            <CloudIcon className={s.svg} />
+          </div>
+        </aside>
         <section className={s.week}>
           <div className={s.degrees}>
             <button

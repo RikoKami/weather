@@ -8,6 +8,29 @@
     .today {
       background-color: nth($blue, 3);
       height: 100vh;
+      overflow: hidden;
+      .climate {
+        position: relative;
+        height: 800px;
+        .svg {
+          position: absolute;
+          content: "";
+          width: 300px;
+          height: auto;
+          opacity: .3;
+          @for $i from 1 through 4 {
+            &:nth-child(#{$i}) {
+              top: $i * 20%;
+            }
+          }
+          &:nth-child(odd) {
+            right: 70%;
+          }
+          &:nth-child(even) {
+            left: 70%;
+          }
+        }
+      }
     }
 
     .week {
