@@ -1,0 +1,11 @@
+
+@keyframes gradientColor {
+  0% { background-color: #59a7ff; }
+  50% { background-color: #0082ff; }
+  100% { background-color: #59a7ff; }
+}
+
+@keyframes rotateColor {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}

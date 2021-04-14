@@ -131,34 +131,8 @@
 
 .humidity {
   .progress {
-    position: relative;
-    height: 48px;
-    min-width: 185px;
-    span, p {
-      position: absolute;
-      top: 0;
-      content: "";
-      color: nth($gray, 2);
-      font-family: "Raleway", sans-serif;
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 14px;
-      &:nth-child(1) {
-        left: 0;
-      }
-      &:nth-child(2) {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      &:nth-child(3){
-        right: 0;
-      }
-    }
-
-    .progressBar {
-      margin-top: 16px;
-      width: 100%;
-    }
+    margin-top: 16px;
+    min-width: 200px;
     p {
       margin: 0;
       top: unset;

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import { Card } from '../components/Card'
 import { NavigationIcon } from '../components/NavigationIcon'
+import { ProgressBar } from '../components/ProgressBar'
 import s from '../styles/Home.module.scss'
 
 interface degrees {
@@ -118,15 +119,7 @@ export default function Home() {
                 <span className={s.number}>85</span>%
               </div>
               <div className={s.progress}>
-                <span>0</span>
-                <span>50</span>
-                <span>100</span>
-                <progress
-                  value="85"
-                  max="100"
-                  className={s.progressBar}
-                ></progress>
-                <p>%</p>
+                <ProgressBar value={0} />
               </div>
             </Card>
             <Card title="Visibility">
