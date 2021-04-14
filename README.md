@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project.
 
 ## About
 
-> Challenge: Create a weather app using an API. 
+> Challenge: Create a weather app using an API.
 
 Fulfill user stories below
 
@@ -30,7 +30,7 @@ Fulfill user stories below
 
 - [ ] User story(optional): I can convert temperature in Celcius to Fahrenheit and vice versa
 
-Icon: <https://google.github.io/material-design-icons/>
+Icon: <https://www.flaticon.com/packs/weather-351?word=snow>
 
 API: <https://www.metaweather.com/api/>
 
