@@ -1,5 +1,17 @@
 @import '../styles/variables';
 
+.groupInfo {
+  font-family: "Raleway",sans-serif;
+  font-size: 40px;
+  line-height: 75px;
+  color: nth($gray, 1);
+  .number{
+    font-family: inherit;
+    font-size: 64px;
+    font-weight: bold;
+  }
+}
+
 .container {
   .main {
     display: grid;
@@ -11,11 +23,11 @@
       overflow: hidden;
       .climate {
         position: relative;
-        height: 800px;
+        height: 400px;
         .svg {
           position: absolute;
           content: "";
-          width: 300px;
+          width: 200px;
           height: auto;
           opacity: .3;
           @for $i from 1 through 4 {
@@ -24,11 +36,38 @@
             }
           }
           &:nth-child(odd) {
-            right: 70%;
+            right: 80%;
           }
           &:nth-child(even) {
-            left: 70%;
+            left: 80%;
           }
+        }
+      }
+
+      .todayTemp {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 87px;
+        img {
+          width: 100%;
+          max-width: 200px;
+        }
+        .degrees {
+          @extend .groupInfo;
+          .number {
+            display: inline-block;
+            font-size: 144px;
+          }
+        }
+        p {
+          font-family: "Raleway",sans-serif;
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 42px;
+          text-align: center;
+          color: nth($gray, 2);
         }
       }
     }
@@ -111,18 +150,6 @@
         margin-left: 16px;
       }
     }
-  }
-}
-
-.groupInfo {
-  font-family: "Raleway",sans-serif;
-  font-size: 40px;
-  line-height: 75px;
-  color: nth($gray, 1);
-  .number{
-    font-family: inherit;
-    font-size: 64px;
-    font-weight: bold;
   }
 }
 

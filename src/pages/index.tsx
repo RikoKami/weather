@@ -76,6 +76,14 @@ export default function Home() {
             <CloudIcon className={s.svg} />
             <CloudIcon className={s.svg} />
             <CloudIcon className={s.svg} />
+
+            <div className={s.todayTemp}>
+              <img src="icons/hail.svg" />
+              <span className={s.degrees}>
+                <div className={s.number}>15</div>ºC
+              </span>
+              <p>Shower</p>
+            </div>
           </div>
         </aside>
         <section className={s.week}>
