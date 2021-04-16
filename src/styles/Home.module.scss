@@ -1,11 +1,11 @@
 @import '../styles/variables';
 
 .groupInfo {
-  font-family: "Raleway",sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 40px;
   line-height: 75px;
   color: nth($gray, 1);
-  .number{
+  .number {
     font-family: inherit;
     font-size: 64px;
     font-weight: bold;
@@ -26,10 +26,10 @@
         height: 400px;
         .svg {
           position: absolute;
-          content: "";
+          content: '';
           width: 200px;
           height: auto;
-          opacity: .3;
+          opacity: 0.3;
           @for $i from 1 through 4 {
             &:nth-child(#{$i}) {
               top: $i * 20%;
@@ -62,7 +62,7 @@
           }
         }
         p {
-          font-family: "Raleway",sans-serif;
+          font-family: 'Raleway', sans-serif;
           font-weight: 600;
           font-size: 36px;
           line-height: 42px;
@@ -109,7 +109,7 @@
       }
 
       .title {
-        font-family: "Raleway", sans-serif;
+        font-family: 'Raleway', sans-serif;
         font-weight: bold;
         font-size: 24px;
         line-height: 28px;
@@ -122,7 +122,6 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 48px;
-
       }
     }
   }
@@ -153,14 +152,13 @@
   }
 }
 
-
 .windStatus {
   .direction {
     display: flex;
     align-items: center;
     column-gap: 16px;
     margin-top: 16px;
-    .icon{
+    .icon {
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -169,15 +167,14 @@
     }
     span {
       display: inline-block;
-      font-family: "Raleway", sans-serif;
+      font-family: 'Raleway', sans-serif;
       font-weight: 500;
       font-size: 14px;
       line-height: 16px;
-      color:nth($gray, 1);
+      color: nth($gray, 1);
     }
   }
 }
-
 
 .humidity {
   .progress {
