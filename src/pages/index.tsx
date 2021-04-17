@@ -13,6 +13,8 @@ interface degrees {
 export default function Home() {
   const [degrees, setDegrees] = useState<degrees | string>()
 
+// TODO CONTEXT API
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleDegrees = (values: degrees) => {
     setDegrees(values)
