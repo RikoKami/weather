@@ -29,7 +29,7 @@
           content: '';
           width: 200px;
           height: auto;
-          opacity: 0.3;
+          opacity: 0.1;
           @for $i from 1 through 4 {
             &:nth-child(#{$i}) {
               top: $i * 20%;
@@ -40,6 +40,46 @@
           }
           &:nth-child(even) {
             left: 80%;
+          }
+        }
+
+        .search {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 42px 46px;
+
+          button {
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba($black, .25);
+            &:first-of-type{
+              background: #6E707A;
+              padding: 10px 18px;
+              font-family: "Raleway", sans-serif;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 19px;
+              color: #E7E7EB;
+              border: 0;
+            }
+            &:last-of-type{
+              background: rgba($white, 0.2);
+              border-radius: 50%;
+              border: 0;
+              width: 40px;
+              height: 40px;
+              outline: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              &:focus{
+                box-shadow: 0 0 3px nth($white, 1);
+              }
+              svg {
+                width: 22px;
+                fill: #E7E7EB;
+              }
+            }
           }
         }
       }

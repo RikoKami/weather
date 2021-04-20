@@ -4,6 +4,7 @@ import { Card } from '../components/Card'
 import { CloudIcon } from '../components/CloudIcon'
 import { NavigationIcon } from '../components/NavigationIcon'
 import { ProgressBar } from '../components/ProgressBar'
+import { TargetIcon } from '../components/TargetIcon'
 import s from '../styles/Home.module.scss'
 
 interface degrees {
@@ -13,7 +14,7 @@ interface degrees {
 export default function Home() {
   const [degrees, setDegrees] = useState<degrees | string>()
 
-// TODO CONTEXT API
+  // TODO CONTEXT API
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleDegrees = (values: degrees) => {
@@ -79,6 +80,13 @@ export default function Home() {
             <CloudIcon className={s.svg} />
             <CloudIcon className={s.svg} />
 
+            <div className={s.search}>
+              <button>Search for places</button>
+              <button>
+                <TargetIcon />
+              </button>
+            </div>
+
             <div className={s.todayTemp}>
               <img src="icons/hail.svg" />
               <span className={s.degrees}>
@@ -137,7 +145,7 @@ export default function Home() {
                 <span className={s.number}>85</span>%
               </div>
               <div className={s.progress}>
-                <ProgressBar value={0} />
+                <ProgressBar value={40} />
               </div>
             </Card>
             <Card title="Visibility">
