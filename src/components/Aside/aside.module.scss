@@ -1,16 +1,5 @@
 @import '../../styles/variables';
-
-.groupInfo {
-  font-family: 'Raleway', sans-serif;
-  font-size: 40px;
-  line-height: 75px;
-  color: nth($gray, 1);
-  .number {
-    font-family: inherit;
-    font-size: 64px;
-    font-weight: bold;
-  }
-}
+@import '../../styles/utils';
 
 .today {
   background-color: nth($blue, 3);
