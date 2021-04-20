@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import { useState } from 'react'
+import { Aside } from '../components/Aside'
 import { Card } from '../components/Card'
-import { CloudIcon } from '../components/CloudIcon'
 import { NavigationIcon } from '../components/NavigationIcon'
 import { ProgressBar } from '../components/ProgressBar'
-import { TargetIcon } from '../components/TargetIcon'
 import s from '../styles/Home.module.scss'
 
 interface degrees {
@@ -73,29 +72,7 @@ export default function Home() {
       </Head>
 
       <main className={s.main}>
-        <aside className={s.today}>
-          <div className={s.climate}>
-            <CloudIcon className={s.svg} />
-            <CloudIcon className={s.svg} />
-            <CloudIcon className={s.svg} />
-            <CloudIcon className={s.svg} />
-
-            <div className={s.search}>
-              <button>Search for places</button>
-              <button>
-                <TargetIcon />
-              </button>
-            </div>
-
-            <div className={s.todayTemp}>
-              <img src="icons/hail.svg" />
-              <span className={s.degrees}>
-                <div className={s.number}>15</div>ºC
-              </span>
-              <p>Shower</p>
-            </div>
-          </div>
-        </aside>
+        <Aside />
         <section className={s.week}>
           <div className={s.degrees}>
             <button
