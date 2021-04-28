@@ -13,7 +13,7 @@
     "commit": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
-    "next": "10.1.2",
+    "next": "^10.1.4-canary.17",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-query": "^3.13.11",
