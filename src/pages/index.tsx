@@ -10,10 +10,8 @@ interface degrees {
   name: 'celsius' | 'fahrenheit'
 }
 
-export default function Home() {
+export default function Home(props) {
   const [degrees, setDegrees] = useState<degrees | string>()
-
-  // TODO CONTEXT API
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleDegrees = (values: degrees) => {
@@ -72,7 +70,7 @@ export default function Home() {
       </Head>
 
       <main className={s.main}>
-        <Aside />
+        <Aside {...props} />
         <section className={s.week}>
           <div className={s.degrees}>
             <button
@@ -140,4 +138,16 @@ export default function Home() {
       </main>
     </div>
   )
+}
+
+export async function getServerSideProps() {
+  const currentLocation = await fetch(
+    'https://www.metaweather.com/api/location/search/?lattlong=-12.9606136,-38.4744683'
+  ).then(res => res.json())
+
+  return {
+    props: {
+      currentLocation
+    }
+  }
 }

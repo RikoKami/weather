@@ -3,9 +3,8 @@ import { CloudIcon } from '../CloudIcon'
 import s from './aside.module.scss'
 import { TargetIcon } from '../TargetIcon'
 import { LocationIcon } from '../LocationIcon'
-import { useQuery } from 'react-query'
 
-export const Aside = () => {
+export const Aside = props => {
   const showPosition = position => {
     console.log(
       'Latitude: ' +
@@ -21,15 +20,6 @@ export const Aside = () => {
       console.log('Geolocation is not supported by this browser.')
     }
   }
-
-  const toJSON = (_: Response) => _.json()
-  const fetcher = () =>
-    fetch(
-      'https://www.metaweather.com/api/location/search/?lattlong=-12.9606136,-38.4744683'
-    ).then(toJSON)
-
-  const { data } = useQuery('cu', fetcher)
-  console.log(data)
 
   return (
     <aside className={s.today}>
@@ -55,7 +45,7 @@ export const Aside = () => {
 
           <div className={s.localization}>
             <LocationIcon fill="#88869D" />
-            <p></p>
+            <p>{props.currentLocation?.map(location => location.title)[0]}</p>
           </div>
         </div>
       </div>
